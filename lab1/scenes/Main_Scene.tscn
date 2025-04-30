@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bnjlwm2gkpvta"]
+
+[ext_resource type="Texture2D" uid="uid://dxr31266d8tkr" path="res://Pictures/sprite1_cat.png" id="1_j6oe2"]
+[ext_resource type="Texture2D" uid="uid://bf00gejvrcsj6" path="res://Pictures/sprite2_ghost.png" id="2_cjsab"]
+[ext_resource type="PackedScene" uid="uid://dadmfq3wwxvi5" path="res://scenes/Jungle.tscn" id="3_qa3pr"]
+[ext_resource type="PackedScene" uid="uid://cph4h856jarke" path="res://scenes/tree_1.tscn" id="4_0fodb"]
+
+[node name="Main_Scene" type="Node2D"]
+position = Vector2(2, 0)
+
+[node name="Sprite1Cat" type="Sprite2D" parent="."]
+position = Vector2(327, 173)
+scale = Vector2(4.09035, 4.09035)
+texture = ExtResource("1_j6oe2")
+
+[node name="Sprite2Ghost" type="Sprite2D" parent="."]
+position = Vector2(-1713, 198)
+scale = Vector2(6.945, 6.945)
+texture = ExtResource("2_cjsab")
+
+[node name="Scene2" parent="." instance=ExtResource("3_qa3pr")]
+position = Vector2(-1732, 532)
+
+[node name="tree1" parent="Scene2" instance=ExtResource("4_0fodb")]
+position = Vector2(-1780, -192)
